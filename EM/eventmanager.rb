@@ -159,23 +159,3 @@ class EventManager
 end
 
 EventManager.setup
-
-class Sender; end
-class Plugin; def name; "PLUGIN"; end; def test_event; puts "Hello, world"; end; end
-class N < Plugin; def name; "NEW PLUGIN"; end; def test_event; sleep 2; puts "Another Hello"; end; end
-
-s = Sender.new
-pl = Plugin.new
-n = N.new
-
-EventManager.add_sender(:test_sender, s)
-EventManager.add_event(:test_sender, :test_event)
-
-EventManager.add_registrar(n, "test_sender->test_event")
-EventManager.add_registrar(pl, "test_sender->test_event")
-
-EventManager.remove_sender( s )
-
-EventManager.debug_dump_ivars
-
-EventManager.broadcast(:test_event, s)

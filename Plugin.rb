@@ -18,6 +18,7 @@ class Plugin
 	end
 
 	def init_proc &body
+		raise ArgumentError, "\'init_proc\' Must Accept 1 Argument" if body.arity != 1
 		@init_proc = body
 	end
 
@@ -26,13 +27,3 @@ class Plugin
 	end
 
 end
-
-rbp_test_plugin = Plugin.new(
- "Test Plugin", "1.0",
- "A Test Plugin to make sure the plugin
-\ class works")
-
-rbp_test_plugin.init_proc { |plugin|
-	EventManager.add_registrar(plugin,
-	"bot->received_packet")
-}

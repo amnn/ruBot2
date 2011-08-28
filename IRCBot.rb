@@ -24,7 +24,35 @@ class IRCBot
 		EventManager.add_sender(:bot, self)
 		EventManager.add_event(:bot, :received_packet)
 	end
+	
+	def connect
+	
+	end
+	
+	def start
+	
+	end
+	
+	def send msg
+	
+	end
+	
+	def send_privmsg to, msg
+	
+	end
+	
+	def send_action to, action
+	
+	end
 
+	def part msg
+	
+	end
+	
+	def quit msg
+	
+	end
+	
 end
 
 bot = IRCBot.new

@@ -2,6 +2,11 @@ module Configurable
 
 =begin
 
+Configurable Module
+
+adds ability to load plugins
+and read config files.
+
 Dependencies:
 
 Instances extended by this module must have an @bot instance variable.

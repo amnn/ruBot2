@@ -17,13 +17,18 @@ class Plugin
 include Configurable
 
 	attr_reader :_name, :_version, :_desc
+	attr_accessor :bot, :p
 
 	def initialize name, version, desc
 
 		@_name 		  = name
 		@_version 	  = version
 		@_description = desc
-
+		
+		# Configurable Dependencies
+		@bot		  = {}
+		@p			  = {}
+		
 	end
 
 	def init_proc &body

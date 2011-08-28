@@ -1,0 +1,10 @@
+  Comments are any lines that do not begin with a key-symbol
+  Key Symbols are as follows
+  
+  "+  [file location]" 			is to load a plugin from file
+  "*  [file location]" 			loads another config file
+  "@  identifier = expression"	sets a plugin property
+  "@@ identifier = expression"	sets a bot property
+  
+  All file locations must be relative to the calling code
+  i.e. the bot

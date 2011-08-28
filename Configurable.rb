@@ -14,6 +14,7 @@ module Configurable
 Dependencies:
 
 Instances extended by this module must have an @bot instance variable.
+Instances extended by this module must also have a @p hash
 
 =end
 
@@ -41,6 +42,28 @@ Instances extended by this module must have an @bot instance variable.
 		@bot.plugins = @bot.plugins | [plugin]
 	end
 	
-	def load_config filename
+	def parse_config_line line
+		
+		case line
+		when /^\+\s*(.+)/i # Load Plugin
+			load_plugin $1
+		when /^\*\s*(.+)/i # Load Config
+			load_config $1
+		when /^\@\s*([a-zA-Z0-9_]+)\s*\=\s*(.+)/i 	# Set Local Property
+			@p[$1] 		= eval $2
+		when /^\@\@\s*([a-zA-Z0-9_]+)\s*\=\s*(.+)/i	# Set Bot Property
+			@bot.p[$1]	= eval $2
+		end
+		
 	end
+	
+	def load_config filename
+		raise ArgumentError, "No Such Config" if !File.exists? filename
+		
+		File.open( filename ) do |f|
+			f.each_line { |l| parse_config_line l }
+		end
+		
+	end
+	
 end

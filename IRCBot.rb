@@ -15,10 +15,12 @@ class.
 class IRCBot
 	include Configurable
 
+	attr_accessor :plugins, :bot, :p
+	
 	def initialize
 		@plugins = []
 		@bot	 = self
-		
+		@p		 = {} # Config Sandbox
 		EventManager.add_sender(:bot, self)
 		EventManager.add_event(:bot, :received_packet)
 	end
@@ -26,4 +28,5 @@ class IRCBot
 end
 
 bot = IRCBot.new
-bot.load_plugin("./plugins/test_plugin.rb")
+bot.load_config "./config"
+

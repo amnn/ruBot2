@@ -1,19 +1,26 @@
-# Plugin Class
-# 
-# Used to add functionality to bot
-# through methods called by events
-# managed by the event manager cl-
-# -ass.
+require "./Configurable.rb"
+
+=begin
+
+Plugin Class
+ 
+Used to add functionality to bot
+through methods called by events
+managed by the event manager cl-
+-ass.
+
+=end
 
 class Plugin
+include Configurable
 
-	attr_reader :name, :version, :desc
+	attr_reader :_name, :_version, :_desc
 
 	def initialize name, version, desc
 
-		@name 		 = name
-		@version 	 = version
-		@description = desc
+		@_name 		  = name
+		@_version 	  = version
+		@_description = desc
 
 	end
 

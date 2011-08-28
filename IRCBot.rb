@@ -54,7 +54,6 @@ class IRCBot
 		
 		send "NICK #{ @p['nick'] }"
 		send "USER #{ @p['nick'] } 0 * :#{ @p['realname'] }"
-		send "JOIN #{ @p['chan'] }"
 		
 	end
 	

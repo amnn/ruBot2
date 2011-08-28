@@ -1,11 +1,15 @@
-module Configurable
-
 =begin
 
-Configurable Module
+Configurable module
 
 adds ability to load plugins
 and read config files.
+
+=end
+
+module Configurable
+
+=begin
 
 Dependencies:
 
@@ -16,7 +20,7 @@ Instances extended by this module must have an @bot instance variable.
 	def load_plugin filename
 		raise ArgumentError, "No Such Plugin" if !File.exists? filename
 		
-		if filename =~ /^(?:.+\/)?([a-zA-Z0-9_]+)\.rb$/i
+		if filename =~ /([a-zA-Z0-9_]+)\.rb$/i
 			var_name = "$rbp_" + $1
 		else
 			raise ArgumentError, "Plugin name in incorrect format, \'#{ filename }\'"

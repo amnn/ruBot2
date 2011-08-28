@@ -11,6 +11,8 @@ managed by the event manager cl-
 
 =end
 
+# TODO: plugin template generator method
+
 class Plugin
 include Configurable
 

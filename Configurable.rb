@@ -32,9 +32,12 @@ Instances extended by this module must have an @bot instance variable.
 		end
 
 		plugin = eval( var_name )
-		plugin.bot = @bot
-		plugin.loaded
-
+		
+		if !(@bot.plugins.include? plugin)
+			plugin.bot = @bot
+			plugin.loaded
+		end
+		
 		@bot.plugins = @bot.plugins | [plugin]
 	end
 	

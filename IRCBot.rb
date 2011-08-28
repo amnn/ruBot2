@@ -3,6 +3,8 @@ require "./em/EventManager.rb"
 
 class IRCBot
 
+
+
 	def initialize
 		@plugins = []
 		EventManager.add_sender(:bot, self)
@@ -13,7 +15,7 @@ class IRCBot
 	def load_plugin filename
 		raise ArgumentError, "No Such Plugin" if !File.exists? filename
 		
-		if filename =~ /^(?:.+\/)?(.+)\.rb$/i
+		if filename =~ /^(?:.+\/)?([a-zA-Z0-9_]+)\.rb$/i
 			var_name = "$rbp_" + $1
 		else
 			raise ArgumentError, "Plugin name in incorrect format, \'#{ filename }\'"

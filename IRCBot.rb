@@ -67,12 +67,12 @@ class IRCBot
 			for r in reqs[0]
 				if		r == $stdin
 					return if $stdin.eof?
-					r 	  = $stdin.gets
+					r 	  = $stdin.gets.chomp
 					
 					EventManager.broadcast(:user_input, self, r)
 				elsif	r == @sock
 					return if @sock.eof?
-					r = @sock.gets
+					r = @sock.gets.chomp
 					
 					EventManager.broadcast(:received_packet, self, r)
 				end
@@ -95,7 +95,7 @@ class IRCBot
 	end
 	
 	def send_action to, action
-		send_privmsg to, "\u0001"+"ACTION #{ action }"
+		send_privmsg to, "\u0001"+"ACTION #{ action }" + "\u0001"
 	end
 
 	def quit msg

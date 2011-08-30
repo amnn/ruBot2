@@ -18,6 +18,10 @@ without the extension, and in camelcase.
 				@bot.send_action @bot.p["chan"], $2
 			when "quit"			# quit
 				@bot.quit $2
+			when "raw"          # raw packet
+			    @bot.send $2
+			when "debug"        # run ruby in bot environment
+			    puts "?        #{ eval( $2 ).inspect }"
 			end
 		else					# message
 		

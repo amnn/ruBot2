@@ -149,8 +149,8 @@ class EventManager
 				print "[#{ c_event.sender }->#{ c_event.name }]\n"
 				
 				registrars.each{ |plugin_id|
-					p plugin_id
-					print ">>> #{ @@registrars[ plugin_id ].name }\n"
+					print "\t>>> #{ @@registrars[ plugin_id ]._name }"
+					print " ( #{ plugin_id} )\n"
 				}
 			}
 		end

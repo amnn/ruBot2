@@ -3,7 +3,6 @@
 ruBot2 is a completely modular IRC robot, written in ruby.
 All of ruBot's functionality is written in its plugins.
 
-* * *
 ## Features
 
 * Plugin and configuration loading.
@@ -11,7 +10,6 @@ All of ruBot's functionality is written in its plugins.
 * SSL support.
 * Keeping track of users and their privileges.
 
-* * *
 ## To Be Implemented
 
 * Admin Plugin
@@ -22,7 +20,6 @@ All of ruBot's functionality is written in its plugins.
 * Anti-Flooding Plugin
 * Banned Phrases Plugin w/Regexp Support
 
-* * *
 ## Usage
 
 To download and start the bot for the first time:
@@ -58,12 +55,12 @@ To download and start the bot for the first time:
 7. The command to start the bot is `ruby IRCBot.rb`. If all goes well,
    the following should appear on your screen:
 
-    --> NICK sQBot
-    --> USER sQBot 0 * :Squirrel Bot
-    -         irc.ctrlalttroll.com
-    --> PONG :irc.ctrlalttroll.com
-    --> JOIN #lobby
-    >        sQBot
+       --> NICK sQBot
+       --> USER sQBot 0 * :Squirrel Bot
+       -         irc.ctrlalttroll.com
+       --> PONG :irc.ctrlalttroll.com
+       --> JOIN #lobby
+       >        sQBot
 
    Where "sQBot", "Squirrel Bot", "irc.ctrlalttroll.com" and "#lobby"
    are replaced with what you put in to the configuration file.
@@ -80,7 +77,6 @@ run from the terminal:
   environment, and will print the result. (Mainly for debugging purposes).
 * `<MSG>` will send a message to the channel, from the bot.
 
-* * *
 ## Plugins
 
 Functionality is added by installing plugins. By default, if you create
@@ -105,7 +101,6 @@ the "./config/" folder, the plugin itself in the "./plugins/" folder and
 then finally, by adding the line `+  ./plugins/plugin_name.rb` in to the
 bot.conf file, so that it will be loaded when the bot starts.
 
-* * *
 ## Configuration
 
 The syntax for the config files is a new one, but it is relatively easy to
@@ -137,9 +132,16 @@ understand.
   adding and accessing properties from the bot's property sandbox (to
   prevent cluttering and namespace issues).
 
-* * *
 ## Further Questions
 
 If you have any further questions, you can visit me at the IRC server and
 channel that were put in to the config/bot.conf file: #lobby on
 irc.ctrlalttroll.com/+6697 and ask for 'asQuirreL'.
+
+## Copyright Notice
+
+There is none! :D You can do almost anything you want with ruBot2. Use it, 
+modify it, redistribute it, print it out and wallpaper your room with it. 
+If you're feeling particularly generous, you could credit me (asQuirreL) 
+for it, just don't try and sell it, and if you do wallpaper your room with
+it, send me a picture.

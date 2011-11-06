@@ -117,7 +117,7 @@ class EventManager
 
         end
 
-        debug_dump_ivars
+        def debug_dump_ivars
 
             print "Senders\n"
 

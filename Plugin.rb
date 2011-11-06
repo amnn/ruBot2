@@ -92,6 +92,7 @@ end
 =begin
 
 Use init_proc to perform parts of the plugin
+
 initialisation that require the bot to be
 initialised itself, i.e, registering to
 relevant events.
@@ -101,6 +102,7 @@ relevant events.
 #{var_name}.init_proc { |_self|
 
     _self.load_config( "#{conf_loc}" )
+
 }
 
 # Include the previously defined methods to the plugin.

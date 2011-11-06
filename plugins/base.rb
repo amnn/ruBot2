@@ -143,4 +143,5 @@ $rbp_base.init_proc { |_self|
 }
 
 # Include the previously defined methods to the plugin.
+
 $rbp_base.extend( RBP_Base )

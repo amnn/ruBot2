@@ -62,6 +62,12 @@ $rbp_user_input.init_proc { |_self|
     "bot->user_input")
 
     _self.load_config( "./config/user_input.conf" )
+	
+	EventManager.add_registrar(_self,
+	"bot->user_input")
+	
+	_self.load_config( "./config/user_input.conf" )
+
 }
 
 # Include the previously defined methods to the plugin.

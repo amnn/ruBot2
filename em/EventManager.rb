@@ -156,6 +156,7 @@ class EventManager
         end
 
     end
+
 end
 
 EventManager.setup

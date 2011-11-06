@@ -55,11 +55,11 @@ To download and start the bot for the first time:
 7. The command to start the bot is `ruby IRCBot.rb`. If all goes well,
    the following should appear on your screen:
 
-> --> NICK sQBot
-> --> USER sQBot 0 * :Squirrel Bot
+> --\> NICK sQBot
+> --\> USER sQBot 0 * :Squirrel Bot
 > -         irc.ctrlalttroll.com
-> --> PONG :irc.ctrlalttroll.com
-> --> JOIN #lobby
+> --\> PONG :irc.ctrlalttroll.com
+> --\> JOIN #lobby
 > \>        sQBot
 
    Where "sQBot", "Squirrel Bot", "irc.ctrlalttroll.com" and "#lobby"

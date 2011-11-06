@@ -57,10 +57,10 @@ To download and start the bot for the first time:
 
     `--> NICK sQBot`  
     `--> USER sQBot 0 * :Squirrel Bot`  
-    `-         irc.ctrlalttroll.com`  
+    `-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;irc.ctrlalttroll.com`  
     `--> PONG :irc.ctrlalttroll.com`  
     `--> JOIN #lobby`  
-    `>        sQBot`  
+    `>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sQBot`  
 
 Where "sQBot", "Squirrel Bot", "irc.ctrlalttroll.com" and "#lobby"
 are replaced with what you put in to the configuration file.

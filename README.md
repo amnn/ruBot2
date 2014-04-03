@@ -12,6 +12,9 @@ All of ruBot's functionality is written in its plugins.
 
 ## To Be Implemented
 
+* Header Grabbing for URLs Posted in Chat
+* Last.fm "Now Playing" Plugin
+* Programmable CTCP Responses
 * Admin Plugin
   * Register/Identify with NickServ.
   * Kick/Ban/Unban/Tempban
@@ -33,10 +36,10 @@ To download and start the bot for the first time:
    here's an explanation:
      * `@@ ssl` is a true/false value, it tells the bot whether or not
 	   you want to connect with SSL.
-	 * `@@ addr` is the address of the server, (i.e. for Freenode, it
-	   would be "irc.freenode.net")
+	 * `@@ addr` is the address of the server, (i.e. for Rizon, it
+	   would be "irc.rizon.net")
 	 * `@@ port` is the port that you're connecting on, default for
-	   IRC is 6667, or 7000 if it is with SSL.
+	   Rizon is 6667, or 8000 if it is with SSL.
 	 * `@@ nick` is the nickname of the bot, and what will show up in
 	   the IRC channel.
 	 * `@@ realname` is the "name" of the bot that will be given if
@@ -55,15 +58,15 @@ To download and start the bot for the first time:
 7. The command to start the bot is `ruby IRCBot.rb`. If all goes well,
    the following should appear on your screen:
 
-Where "sQBot", "Squirrel Bot", "irc.ctrlalttroll.com" and "#lobby"
+Where "ruBot2", "Ruby Bot", "irc.rizon.net" and "#rubot-dev"
 are replaced with what you put in to the configuration file.
 
-    --> NICK sQBot
-    --> USER sQBot 0 * :Squirrel Bot  
-    -         irc.ctrlalttroll.com  
-    --> PONG :irc.ctrlalttroll.com
-    --> JOIN #lobby  
-    >        sQBot
+    --> NICK ruBot2
+    --> USER ruBot2 0 * :Ruby Bot
+    -         irc.rizon.net
+    --> PONG :irc.rizon.net
+    --> JOIN #rubot-dev
+    >        ruBot2
 
 Once you have started the bot up, there are various commands that can be
 run from the terminal:
@@ -135,8 +138,8 @@ understand.
 ## Further Questions
 
 If you have any further questions, you can visit me at the IRC server and
-channel that were put in to the config/bot.conf file: #lobby on
-irc.ctrlalttroll.com/+6697 and ask for 'asQuirreL'.
+channel that were put in to the config/bot.conf file: ##darkirc on
+irc.freenode.net/+7070 and ask for 'asQuirreL' or 'kona'.
 
 ## Copyright Notice
 

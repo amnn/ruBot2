@@ -27,8 +27,10 @@ end
 
 # Initialise Plugin itself
 $rbp_topic = Plugin.new(
-"Topic", :PLUGIN_VERSION,
-:PLUGIN_DESCRIPTION)
+"Topic", "1.0",
+'Plugin to allow all users' \
+'in the channel to change'  \
+'the topic when bot is op.')
 
 =begin
 
@@ -44,6 +46,8 @@ $rbp_topic.init_proc { |_self|
     
     EventManager.add_registrar(_self, "base->public_command")
     
+    _self.load_config( "./config/topic.conf" )
+
 }
 
 # Include the previously defined methods to the plugin.
